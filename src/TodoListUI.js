@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{} from 'react';
 import { Input, Button, List } from 'antd';
 
 const TodoListUI = (props) => {
@@ -20,7 +20,7 @@ const TodoListUI = (props) => {
                     footer={<div>Footer</div>}
                     bordered
                     dataSource={props.list}
-                    renderItem={(item,index) => <List.Item onClick={(index) => {props.handleItemDelete(index)}}>{item}</List.Item>}
+                    renderItem={(item,index) => <List.Item onClick={(index) => {props.handleItemDelete(index)}}>{item}</List.Item>}//onclick是一个剪头函数，并不会接收传递过来的index这些参数，可以去掉，后面handleItemDelete方法会自己拿到index的
                 />
             </div>
     )

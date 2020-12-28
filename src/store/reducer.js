@@ -1,9 +1,9 @@
+
 import {CHANGE_INPUT_VALUE,ADD_TODO_ITEM,DELETE_TODO_ITEM,INIT_LIST_ACTION} from './actionTypes';
 const defaultState = {
     inputValue : ''
     ,list : []
 }
-
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = defaultState,action) => {
@@ -28,6 +28,5 @@ export default (state = defaultState,action) => {
         newState.list = action.data;
         return newState;
     }
-    console.log(state,action)
     return state;
 }
